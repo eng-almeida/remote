@@ -1,9 +1,16 @@
 import Link from 'next/link';
 import { useSelector } from 'react-redux';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 import { allUsers } from 'redux/slices/users';
-import Button from '../Button';
+import Button from 'components/Elements/Button';
+import { LabelOne, LabelTwo, LabelThree, LabelFour } from 'components/Elements/Typography';
+
+const Ellipsis = css`
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+`;
 
 const Container = styled.section`
   align-items: center;
@@ -11,6 +18,7 @@ const Container = styled.section`
   display: flex;
   justify-content: space-between;
 `;
+
 const Title = styled.h1`
   color: ${({ theme }) => theme.colors.grays[300]};
   display: inline-block;
@@ -19,6 +27,7 @@ const Title = styled.h1`
   line-height: 31px;
   margin-right: ${({ theme }) => theme.space[2]};
 `;
+
 const EmployeesCount = styled.span`
   color: ${({ theme }) => theme.colors.grays[100]};
   display: inline-block;
@@ -26,11 +35,13 @@ const EmployeesCount = styled.span`
   font-size: 13px;
   line-height: 16px;
 `;
-const Grid = styled.div`
+
+const Table = styled.div`
   display: grid;
   grid-row-gap: ${({ theme }) => theme.space[2]};
 `;
-const RowTitle = styled.div`
+
+const Th = styled.div`
   display: flex;
   align-items: center;
   font-size: 12px;
@@ -38,38 +49,43 @@ const RowTitle = styled.div`
   text-transform: uppercase;
   padding: ${({ theme }) => `0 ${theme.space[6]}`};
 `;
-const Row = styled.div`
+
+const Tr = styled.div`
+  ${LabelThree}
   display: flex;
   align-items: center;
   background: ${({ theme }) => theme.colors.white};
   padding: ${({ theme }) => `${theme.space[8]} ${theme.space[6]}`};
   border-radius: ${({ theme }) => theme.radii.medium};
-  font-size: 16px;
-  line-height: 26px;
 `;
-const Col = styled.div`
+
+const Td = styled.div`
   color: ${({ theme }) => theme.colors.grays[200]};
   flex: ${({ size = 1 }) => size};
   min-width: 0;
 `;
-const Ellipsis = styled.div`
+
+const Name = styled.div`
+  ${LabelFour}
+  ${Ellipsis}
   color: ${({ theme }) => theme.colors.grays[300]};
   font-weight: ${({ theme }) => theme.fontWeights.semibold};
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  font-size: 18px;
-  line-height: 22px;
+  padding-right: ${({ theme }) => theme.space[4]};
 `;
+
+const Role = styled.div`
+  ${Ellipsis}
+  padding-right: ${({ theme }) => theme.space[4]};
+`;
+
 const Date = styled.div`
+  ${LabelTwo}
   color: ${({ theme }) => theme.colors.grays[100]};
-  font-size: 14px;
-  line-height: 22px;
 `;
+
 const PerYear = styled.span`
+  ${LabelOne}
   color: ${({ theme }) => theme.colors.grays[100]};
-  font-size: 13px;
-  line-height: 18px;
 `;
 
 const formatPrice = price => new Intl.NumberFormat('en-US').format(price);
@@ -90,36 +106,36 @@ const EmployeesList = () => {
         </Link>
       </Container>
       {users.length > 0 && (
-        <Grid>
-          <RowTitle>
-            <Col>Employee</Col>
-            <Col>Job Title</Col>
-            <Col>Country</Col>
-            <Col>Salary</Col>
-            <Col size="none" style={{ minWidth: '142px' }}></Col>
-          </RowTitle>
+        <Table>
+          <Th>
+            <Td>Employee</Td>
+            <Td>Job Title</Td>
+            <Td>Country</Td>
+            <Td>Salary</Td>
+            <Td size="none" style={{ minWidth: '142px' }}></Td>
+          </Th>
           {users.map(user => (
-            <Row key={user.id}>
-              <Col>
-                <Ellipsis>{user.name}</Ellipsis>
+            <Tr key={user.id}>
+              <Td>
+                <Name>{user.name}</Name>
                 <Date>04/12/1990</Date>
-              </Col>
-              <Col>{user.jobTitle}</Col>
-              <Col>{user.country}</Col>
-              <Col>
+              </Td>
+              <Td><Role>{user.role}</Role></Td>
+              <Td>{user.country}</Td>
+              <Td>
                 {formatPrice(user.salary)} USD{' '}
                 <PerYear>per year</PerYear>
-              </Col>
-              <Col size="none">
+              </Td>
+              <Td size="none">
                 <Link href={`/user/${user.id}`} passHref>
                   <Button as="a" variant="secondary">
                     Edit
                   </Button>
                 </Link>
-              </Col>
-            </Row>
+              </Td>
+            </Tr>
           ))}
-        </Grid>
+        </Table>
       )}
     </>
   );

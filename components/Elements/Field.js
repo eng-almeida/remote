@@ -1,19 +1,18 @@
 import React, { useState, useCallback } from 'react';
 import styled from 'styled-components';
+import { LabelOne } from 'components/Elements/Typography'
 
 const Label =  styled.label`
+	${LabelOne}
 	display: block;
 	color: ${({ theme, isFocus }) => isFocus ? theme.colors.purple[200] : theme.colors.grays[100]};
-	font-size: 13px;
-	line-height: 16px;
 	margin-bottom: ${({ theme }) => theme.space[1]};
 `;
 
  const HelperText = styled.div`
+	${LabelOne}
 	color: ${({ theme }) => theme.colors.grays[300]};
 	opacity: 0.5;
-	font-size: 13px;
-	line-height: 16px;
 	margin-top: ${({ theme }) => theme.space[2]};
 `;
 

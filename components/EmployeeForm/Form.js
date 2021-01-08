@@ -5,9 +5,9 @@ import { usersAddOne, userUpdate } from 'redux/slices/users';
 import styled from 'styled-components';
 import { v4 as uuidv4 } from 'uuid';
 
-import Button from 'components/Button';
-import TextField from 'components/TextField';
-import Select from 'components/Select';
+import Button from 'components/Elements/Button';
+import TextField from 'components/Elements/TextField';
+import Select from 'components/Elements/Select';
 
 const FieldContainer = styled.div`
   display: grid;
@@ -34,8 +34,13 @@ const defaultEmployeeData = {
 	name: '',
 	birthdate: '',
 	role: '',
-	salary: '',
+  salary: '',
+  country: 'Portugal'
 };
+
+const COUNTRIES = [
+  "Portugal", "Spain", "France", "United States"
+];
 
 const EmployeeForm = ({ data }) => {
 	const dispatch = useDispatch();
@@ -98,14 +103,14 @@ const EmployeeForm = ({ data }) => {
         value={employee.role}
         onChange={handleChange}
       />
-			<Select 
+      <Select 
+        id="country"
+        name="country"
 				label="Country"
         helperText="Where are they base?"
+        onChange={handleChange}
 			>
-				<option>Portugal</option>
-				<option>Spain</option>
-				<option>France</option>
-				<option>USA</option>
+        {COUNTRIES.map((value) => <option value={value} selected={employee.country === value}>{value}</option>)}
 			</Select>
       <TextField
         label="Salary"

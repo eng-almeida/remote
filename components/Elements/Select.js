@@ -1,13 +1,13 @@
 import styled from 'styled-components';
 
 import Field from './Field';
+import { FieldText } from './Typography';
 
 const Select = styled.select`
+	${FieldText}
 	border: none;
 	border-bottom: 1px solid ${({ theme }) => theme.colors.grays[400]};
 	color: ${({ theme }) => theme.colors.grays[300]};
-	font-size: 20px;
-	line-height: 24px;
 	outline: none;
 	padding-bottom: ${({ theme }) => theme.space[2]};
 	width: 100%;

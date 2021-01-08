@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 
 import Field from './Field';
+import { FieldText } from './Typography';
 
 const TextInput = styled.input`
+	${FieldText}
  	font-family: inherit;
-	font-size: 20px;
-	line-height: 24px;
 	color: ${({ theme }) => theme.colors.grays[300]};
 	outline: none;
 	background: transparent;

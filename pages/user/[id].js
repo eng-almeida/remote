@@ -4,8 +4,8 @@ import { useSelector } from 'react-redux';
 import styled from 'styled-components';
 
 import MainContainer from 'components/MainContainer';
-import EmployeeForm from 'components/EmployeeForm';
-import EmployeeFormTitle from 'components/EmployeeForm/EmployeeFormTitle';
+import EmployeeForm from 'components/EmployeeForm/Form';
+import FormTitle from 'components/EmployeeForm/FormTitle';
 
 import { userSelectors } from 'redux/slices/users'
 
@@ -25,7 +25,7 @@ export default function EditUser() {
 
   return (
     <Container>
-      <EmployeeFormTitle 
+      <FormTitle 
         title="Edit employee" 
         description="Edit the information of your employee" 
       />
