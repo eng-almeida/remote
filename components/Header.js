@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import MainContainer from 'components/MainContainer';
+import MainContainer from '@/components/MainContainer';
 
 const Styles = {
 	Header: styled.header`

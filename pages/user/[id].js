@@ -3,9 +3,9 @@ import Error from 'next/error'
 import { useSelector } from 'react-redux';
 import styled from 'styled-components';
 
-import MainContainer from 'components/MainContainer';
-import EmployeeForm from 'components/EmployeeForm/Form';
-import FormTitle from 'components/EmployeeForm/FormTitle';
+import MainContainer from '@/components/MainContainer';
+import EmployeeForm from '@/components/EmployeeForm/Form';
+import FormTitle from '@/components/EmployeeForm/FormTitle';
 
 import { userSelectors } from 'redux/slices/users'
 

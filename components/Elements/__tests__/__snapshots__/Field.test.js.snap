@@ -1,0 +1,71 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Field component should match snapshot 1`] = `
+.c0 {
+  font-size: 13px;
+  line-height: 16px;
+  display: block;
+  color: #778CA3;
+  margin-bottom: 4px;
+}
+
+.c1 {
+  font-size: 13px;
+  line-height: 16px;
+  color: #00234B;
+  opacity: 0.5;
+  margin-top: 8px;
+}
+
+<div>
+  <div>
+    <label
+      class="c0"
+      for="test"
+    >
+      Test
+    </label>
+    <input
+      id="test"
+    />
+    <div
+      class="c1"
+    />
+  </div>
+</div>
+`;
+
+exports[`Field component when input is focused should match snapshot 1`] = `
+.c0 {
+  font-size: 13px;
+  line-height: 16px;
+  display: block;
+  color: #624DE3;
+  margin-bottom: 4px;
+}
+
+.c1 {
+  font-size: 13px;
+  line-height: 16px;
+  color: #00234B;
+  opacity: 0.5;
+  margin-top: 8px;
+}
+
+<div>
+  <div>
+    <label
+      class="c0"
+      for="test"
+    >
+      Test
+    </label>
+    <input
+      id="test"
+    />
+    <div
+      class="c1"
+    />
+  </div>
+</div>
+`;

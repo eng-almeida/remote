@@ -1,6 +1,6 @@
 import React, { useState, useCallback } from 'react';
 import styled from 'styled-components';
-import { LabelOne } from 'components/Elements/Typography'
+import { LabelOne } from '@/components/Elements/Typography'
 
 const Label =  styled.label`
 	${LabelOne}
@@ -24,9 +24,9 @@ const Field = ({ id, label, helperText, children }) => {
   return (
     <div>
       <Label isFocus={isFocus} htmlFor={id}>{label}</Label>
-				{React.Children.map(children, child => (
-					React.cloneElement(child, { onFocus: handleFocus, onBlur: handleBlur })
-				))}
+		{React.Children.map(children, child => (
+			React.cloneElement(child, { onFocus: handleFocus, onBlur: handleBlur })
+		))}
       <HelperText>{helperText}</HelperText>
     </div>
   )

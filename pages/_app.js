@@ -1,7 +1,7 @@
 import { Provider } from 'react-redux';
 import { ThemeProvider } from "styled-components";
 
-import Layout from '../components/Layout';
+import Layout from '@/components/Layout';
 import store from '../redux/store';
 import theme from '../styles/theme';
 

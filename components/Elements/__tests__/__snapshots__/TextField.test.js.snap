@@ -1,0 +1,82 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TextField component should match snapshot 1`] = `
+.c0 {
+  font-size: 13px;
+  line-height: 16px;
+  display: block;
+  color: #778CA3;
+  margin-bottom: 4px;
+}
+
+.c2 {
+  font-size: 13px;
+  line-height: 16px;
+  color: #00234B;
+  opacity: 0.5;
+  margin-top: 8px;
+}
+
+.c1 {
+  font-size: 20px;
+  line-height: 24px;
+  font-family: inherit;
+  color: #00234B;
+  outline: none;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #CED5DB;
+  padding-bottom: 8px;
+  width: 100%;
+}
+
+.c1::-webkit-input-placeholder,
+.c1::-webkit-input-placeholder,
+.c1:-ms-input-placeholder {
+  color: #525F7F;
+}
+
+.c1::-moz-placeholder,
+.c1::-webkit-input-placeholder,
+.c1:-ms-input-placeholder {
+  color: #525F7F;
+}
+
+.c1:-ms-input-placeholder,
+.c1::-webkit-input-placeholder,
+.c1:-ms-input-placeholder {
+  color: #525F7F;
+}
+
+.c1::placeholder,
+.c1::-webkit-input-placeholder,
+.c1:-ms-input-placeholder {
+  color: #525F7F;
+}
+
+.c1:focus {
+  border-bottom: 1.5px solid #624DE3;
+}
+
+<div>
+  <div>
+    <label
+      class="c0"
+      for="test"
+    >
+      Test
+    </label>
+    <input
+      class="c1"
+      id="test"
+      name="test"
+      placeholder="Test"
+    />
+    <div
+      class="c2"
+    >
+      Test helper
+    </div>
+  </div>
+</div>
+`;

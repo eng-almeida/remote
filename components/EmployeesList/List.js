@@ -3,8 +3,8 @@ import { useSelector } from 'react-redux';
 import styled, { css } from 'styled-components';
 
 import { allUsers } from 'redux/slices/users';
-import Button from 'components/Elements/Button';
-import { LabelOne, LabelTwo, LabelThree, LabelFour } from 'components/Elements/Typography';
+import Button from '@/components/Elements/Button';
+import { LabelOne, LabelTwo, LabelThree, LabelFour } from '@/components/Elements/Typography';
 
 const Ellipsis = css`
   white-space: nowrap;

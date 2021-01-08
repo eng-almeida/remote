@@ -1,13 +1,13 @@
 import { useRouter } from 'next/router';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { usersAddOne, userUpdate } from 'redux/slices/users';
+import { usersAddOne, userUpdate } from '@/redux/slices/users';
 import styled from 'styled-components';
 import { v4 as uuidv4 } from 'uuid';
 
-import Button from 'components/Elements/Button';
-import TextField from 'components/Elements/TextField';
-import Select from 'components/Elements/Select';
+import Button from '@/components/Elements/Button';
+import TextField from '@/components/Elements/TextField';
+import Select from '@/components/Elements/Select';
 
 const FieldContainer = styled.div`
   display: grid;
@@ -55,7 +55,7 @@ const EmployeeForm = ({ data }) => {
     });
   };
 
-  const handleEmployee = (ev) => {
+  const handleSubmitEmployee = (ev) => {
 		ev.preventDefault();
 		if(!data) {
 			dispatch(usersAddOne(employee));
@@ -70,7 +70,7 @@ const EmployeeForm = ({ data }) => {
 		router.push('/');
 	}
 	
-  return <form onSubmit={handleEmployee}>
+  return <form onSubmit={handleSubmitEmployee}>
     <FieldContainer>
       <TextField
         label="Name"
@@ -109,8 +109,9 @@ const EmployeeForm = ({ data }) => {
 				label="Country"
         helperText="Where are they base?"
         onChange={handleChange}
+        value={employee.country}
 			>
-        {COUNTRIES.map((value) => <option value={value} selected={employee.country === value}>{value}</option>)}
+        {COUNTRIES.map((value, idx) => <option key={idx} value={value}>{value}</option>)}
 			</Select>
       <TextField
         label="Salary"
