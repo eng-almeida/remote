@@ -4,6 +4,10 @@ import PropTypes from 'prop-types';
 import Field from './Field';
 import { FieldText } from './Typography';
 
+const SelectContainer = styled.div`
+	position: relative;
+`;
+
 const Select = styled.select`
 	${FieldText}
 	border: none;
@@ -20,11 +24,26 @@ const Select = styled.select`
 	}
 `;
 
+const Caret = styled.span`
+	position: absolute;
+	right: ${({ theme }) => theme.space[4]};
+	top: ${({ theme }) => theme.space[2]};
+	display: inline-flex;
+	width: 10px;
+	height: 10px;
+	border-left: 2px solid ${({ theme }) => theme.colors.grays[400]};
+    border-bottom: 2px solid ${({ theme }) => theme.colors.grays[400]};
+    transform: rotate(-45deg);
+`;
+
 const SelectComponent = ({ label, helperText, children, ...inputProps }) => (
 	<Field label={label} helperText={helperText} id={inputProps.id}>
-		<Select {...inputProps}>
-			{ children }
-		</Select>
+		<SelectContainer>	
+			<Select {...inputProps}>
+				{ children }
+			</Select>
+			<Caret />
+		</SelectContainer>
 	</Field>
 );
 
