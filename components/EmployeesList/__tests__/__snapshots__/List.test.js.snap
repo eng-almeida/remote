@@ -1,0 +1,390 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Employee List component should render empty list 1`] = `
+.c3 {
+  display: inline-block;
+  text-align: center;
+  background: #624DE3;
+  border: 2px solid #624DE3;
+  border-radius: 50px;
+  box-shadow: 0px 6px 12px rgba(98,77,227,0.3);
+  padding: 12px 26px;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 19px;
+  font-family: inherit;
+  min-width: 142px;
+}
+
+.c0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 48px auto 56px auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.c1 {
+  color: #00234B;
+  display: inline-block;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 31px;
+  margin-right: 8px;
+}
+
+.c2 {
+  color: #778CA3;
+  display: inline-block;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 16px;
+}
+
+<div>
+  <section
+    class="c0"
+  >
+    <div>
+      <h1
+        class="c1"
+      >
+        People
+      </h1>
+      <span
+        class="c2"
+      >
+        0
+         employees
+      </span>
+    </div>
+    <a
+      class="c3"
+      href="/user"
+    >
+      Add employee
+    </a>
+  </section>
+</div>
+`;
+
+exports[`Employee List component should render list 1`] = `
+.c3 {
+  display: inline-block;
+  text-align: center;
+  background: #624DE3;
+  border: 2px solid #624DE3;
+  border-radius: 50px;
+  box-shadow: 0px 6px 12px rgba(98,77,227,0.3);
+  padding: 12px 26px;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 19px;
+  font-family: inherit;
+  min-width: 142px;
+}
+
+.c13 {
+  display: inline-block;
+  text-align: center;
+  background: transparent;
+  border: 2px solid #624DE3;
+  border-radius: 50px;
+  box-shadow: 0px 6px 12px rgba(98,77,227,0.3);
+  padding: 12px 26px;
+  color: #624DE3;
+  font-size: 16px;
+  line-height: 19px;
+  font-family: inherit;
+  min-width: 142px;
+}
+
+.c0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 48px auto 56px auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.c1 {
+  color: #00234B;
+  display: inline-block;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 31px;
+  margin-right: 8px;
+}
+
+.c2 {
+  color: #778CA3;
+  display: inline-block;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 16px;
+}
+
+.c4 {
+  display: grid;
+  grid-row-gap: 8px;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 12px;
+  line-height: 20px;
+  text-transform: uppercase;
+  padding: 0 26px;
+}
+
+.c8 {
+  font-size: 16px;
+  line-height: 26px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: #ffffff;
+  padding: 32px 26px;
+  border-radius: 10px;
+}
+
+.c6 {
+  color: #525F7F;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  min-width: 0;
+}
+
+.c7 {
+  color: #525F7F;
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+  min-width: 0;
+}
+
+.c9 {
+  font-size: 18px;
+  line-height: 22px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  color: #00234B;
+  font-weight: 600;
+  padding-right: 16px;
+}
+
+.c11 {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  padding-right: 16px;
+}
+
+.c10 {
+  font-size: 14px;
+  line-height: 22px;
+  color: #778CA3;
+}
+
+.c12 {
+  font-size: 13px;
+  line-height: 16px;
+  color: #778CA3;
+}
+
+<div>
+  <section
+    class="c0"
+  >
+    <div>
+      <h1
+        class="c1"
+      >
+        People
+      </h1>
+      <span
+        class="c2"
+      >
+        2
+         employees
+      </span>
+    </div>
+    <a
+      class="c3"
+      href="/user"
+    >
+      Add employee
+    </a>
+  </section>
+  <div
+    class="c4"
+  >
+    <div
+      class="c5"
+    >
+      <div
+        class="c6"
+      >
+        Employee
+      </div>
+      <div
+        class="c6"
+      >
+        Job Title
+      </div>
+      <div
+        class="c6"
+      >
+        Country
+      </div>
+      <div
+        class="c6"
+      >
+        Salary
+      </div>
+      <div
+        class="c7"
+        style="min-width: 142px;"
+      />
+    </div>
+    <div
+      class="c8"
+    >
+      <div
+        class="c6"
+      >
+        <div
+          class="c9"
+        >
+          John Doe
+        </div>
+        <div
+          class="c10"
+        >
+          04/12/1990
+        </div>
+      </div>
+      <div
+        class="c6"
+      >
+        <div
+          class="c11"
+        >
+          Professor
+        </div>
+      </div>
+      <div
+        class="c6"
+      >
+        Portugal
+      </div>
+      <div
+        class="c6"
+      >
+        50,000
+         USD
+         
+        <span
+          class="c12"
+        >
+          per year
+        </span>
+      </div>
+      <div
+        class="c7"
+      >
+        <a
+          class="c13"
+          href="/user/1"
+        >
+          Edit
+        </a>
+      </div>
+    </div>
+    <div
+      class="c8"
+    >
+      <div
+        class="c6"
+      >
+        <div
+          class="c9"
+        >
+          Jane Doe
+        </div>
+        <div
+          class="c10"
+        >
+          04/12/1990
+        </div>
+      </div>
+      <div
+        class="c6"
+      >
+        <div
+          class="c11"
+        >
+          Engineer
+        </div>
+      </div>
+      <div
+        class="c6"
+      >
+        Portugal
+      </div>
+      <div
+        class="c6"
+      >
+        50,000
+         USD
+         
+        <span
+          class="c12"
+        >
+          per year
+        </span>
+      </div>
+      <div
+        class="c7"
+      >
+        <a
+          class="c13"
+          href="/user/2"
+        >
+          Edit
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+`;

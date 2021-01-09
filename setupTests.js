@@ -8,12 +8,11 @@ import theme from './styles/theme';
 
 const buildMockStore = (mockedStore = {}) => {
   const mockStore = configureStore([]);
-  const store = mockStore(mockedStore);
-  return store;
+  return mockStore(mockedStore);
 };
 
 global.renderWithProviders = (component, options = {}) => {
-  const { store, ...renderOptions } = options;
+  const { store } = options;
   return render(component, {
     wrapper: ({ children }) => (
       <ThemeProvider theme={theme}>

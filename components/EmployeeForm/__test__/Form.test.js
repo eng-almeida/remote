@@ -11,12 +11,13 @@ jest.mock('react-redux', () => ({
 }));
 
 const mockPush = jest.fn();
-jest.spyOn(require('next/router'), 'useRouter').mockImplementation(() => ({
-	push: mockPush,
+jest.mock('next/router', () => ({
+  useRouter: jest.fn().mockImplementation(() => ({
+		push: mockPush,
+	}))
 }));
 
 describe('Form component', () => {
-
 	describe('when creating a new employee', () => {
 		beforeEach(() => {
 			renderWithProviders(<Form />);
@@ -27,7 +28,7 @@ describe('Form component', () => {
 			expect(addButton).toBeInTheDocument()
 		});
 
-		it('should dispatch usersAddOne on submit', () => {
+		it('should dispatch usersAddOne and redirect on submit', () => {
 			const addButton = screen.getByText('Add Employee');
 			const nameInput = screen.getByLabelText(/Name/i);
 			const birthdateInput = screen.getByLabelText(/Birthdate/i);
@@ -53,7 +54,8 @@ describe('Form component', () => {
 						salary: "5000"
 					}, 
 					type: "users/usersAddOne"
-				})
+				});
+			expect(mockPush).toHaveBeenCalledWith('/');
 		});
 	});
 
@@ -75,10 +77,9 @@ describe('Form component', () => {
 			expect(saveButton).toBeInTheDocument()
 		});
 
-		it('should dispatch userUpdate on submit', () => {
+		it('should dispatch userUpdate and redirect on submit', () => {
 			const addButton = screen.getByText('Save');
 			const countryInput = screen.getByLabelText(/Country/i);
-			
 			fireEvent.change(countryInput, { target: { value: 'France'}});
 			fireEvent.click(addButton);
 
@@ -96,7 +97,8 @@ describe('Form component', () => {
 						}
 					}, 
 					type: "users/userUpdate"
-				})
+				});
+				expect(mockPush).toHaveBeenCalledWith('/');
 		});
 	})
 
