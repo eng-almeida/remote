@@ -1,35 +1,7 @@
-import { useRouter } from 'next/router';
-import Error from 'next/error'
-import { useSelector } from 'react-redux';
-import styled from 'styled-components';
+import EditForm from '@/components/EmployeeForm/EditForm';
 
-import MainContainer from '@/components/MainContainer';
-import EmployeeForm from '@/components/EmployeeForm/Form';
-import FormTitle from '@/components/EmployeeForm/FormTitle';
+const EditEmployee = () => (
+  <EditForm />
+);
 
-import { userSelectors } from 'redux/slices/users'
-
-const Container = styled(MainContainer)`
-  background: ${({ theme }) => theme.colors.white};
-  border-radius: ${({ theme }) => theme.radii.medium};
-  margin-top: ${({ theme }) => theme.space[11]};
-`;
-
-export default function EditUser() {
-  const router = useRouter();
-  const employee = useSelector((state) => userSelectors.selectById(state, router.query.id))
-  
-  if (!employee) {
-    return <Error statusCode={404} />
-  }
-
-  return (
-    <Container>
-      <FormTitle 
-        title="Edit employee" 
-        description="Edit the information of your employee" 
-      />
-      <EmployeeForm data={employee} />
-    </Container>
-  );
-}
+export default EditEmployee;

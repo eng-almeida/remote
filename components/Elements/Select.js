@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 import Field from './Field';
 import { FieldText } from './Typography';
@@ -19,14 +20,18 @@ const Select = styled.select`
 	}
 `;
 
-const SelectComponent = ({ label, helperText, children, ...inputProps }) => {
-	return (
-		<Field label={label} helperText={helperText} id={inputProps.id}>
-			<Select {...inputProps}>
-				{ children }
-			</Select>
-		</Field>
-	);
+const SelectComponent = ({ label, helperText, children, ...inputProps }) => (
+	<Field label={label} helperText={helperText} id={inputProps.id}>
+		<Select {...inputProps}>
+			{ children }
+		</Select>
+	</Field>
+);
+
+SelectComponent.propTypes = {
+	label: PropTypes.string,
+	helperText: PropTypes.string,
+	children: PropTypes.arrayOf(PropTypes.element),
 };
 
 export default SelectComponent;

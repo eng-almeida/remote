@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 import Field from './Field';
 import { FieldText } from './Typography';
@@ -25,12 +26,15 @@ const TextInput = styled.input`
 	}
 `;
 
-const TextField = ({ label, helperText, ...inputProps }) => {
-  return (
-    <Field label={label} helperText={helperText} id={inputProps.id}>
-      <TextInput {...inputProps} />
-    </Field>
-  )
-}
+const TextField = ({ label, helperText, ...inputProps }) => (
+	<Field label={label} helperText={helperText} id={inputProps.id}>
+		<TextInput {...inputProps} />
+	</Field>
+);
+
+TextField.propTypes = {
+	label: PropTypes.string,
+	helperText: PropTypes.string,
+};
 
 export default TextField;

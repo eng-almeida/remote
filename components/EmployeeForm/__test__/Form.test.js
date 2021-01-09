@@ -1,13 +1,8 @@
 import { screen, fireEvent } from '@testing-library/react';
-import Form from '../Form';
+import Form from '../partials/Form';
 
 jest.mock('uuid', () => ({
   v4: jest.fn().mockReturnValue("1"),
-}));
-
-const mockDispatch = jest.fn();
-jest.mock('react-redux', () => ({
-  useDispatch: () => mockDispatch,
 }));
 
 const mockPush = jest.fn();
@@ -17,10 +12,12 @@ jest.mock('next/router', () => ({
 	}))
 }));
 
+const mockOnSubmit = jest.fn();
+
 describe('Form component', () => {
 	describe('when creating a new employee', () => {
 		beforeEach(() => {
-			renderWithProviders(<Form />);
+			renderWithProviders(<Form onSubmit={mockOnSubmit} />);
 		})
 
 		it('should render Add button', () => {
@@ -28,7 +25,7 @@ describe('Form component', () => {
 			expect(addButton).toBeInTheDocument()
 		});
 
-		it('should dispatch usersAddOne and redirect on submit', () => {
+		it('should call onSubmit callback and redirect to the home page on submit', () => {
 			const addButton = screen.getByText('Add Employee');
 			const nameInput = screen.getByLabelText(/Name/i);
 			const birthdateInput = screen.getByLabelText(/Birthdate/i);
@@ -43,18 +40,14 @@ describe('Form component', () => {
 			fireEvent.change(salaryInput, { target: { value: '5000'}});
 			fireEvent.click(addButton);
 
-			expect(mockDispatch).toHaveBeenCalledWith(
-				{
-					payload: {
-						birthdate: "17/02/1990", 
-						country: "Portugal", 
-						id: "1", 
-						name: "John Doe", 
-						role: "Software Eng", 
-						salary: "5000"
-					}, 
-					type: "users/usersAddOne"
-				});
+			expect(mockOnSubmit).toHaveBeenCalledWith({
+				birthdate: "17/02/1990", 
+				country: "Portugal", 
+				id: "1", 
+				name: "John Doe", 
+				role: "Software Eng", 
+				salary: "5000"
+			});
 			expect(mockPush).toHaveBeenCalledWith('/');
 		});
 	});
@@ -69,38 +62,12 @@ describe('Form component', () => {
 				salary: '5000',
 				country: 'Portugal'
 			};
-			renderWithProviders(<Form data={data}/>);
+			renderWithProviders(<Form data={data} onSubmit={mockOnSubmit} />);
 		})
 
 		it('should render Save button', () => {
 			const saveButton = screen.getByText('Save');
 			expect(saveButton).toBeInTheDocument()
 		});
-
-		it('should dispatch userUpdate and redirect on submit', () => {
-			const addButton = screen.getByText('Save');
-			const countryInput = screen.getByLabelText(/Country/i);
-			fireEvent.change(countryInput, { target: { value: 'France'}});
-			fireEvent.click(addButton);
-
-			expect(mockDispatch).toHaveBeenCalledWith(
-				{
-					payload: {
-						id: "1",
-						changes: {
-							birthdate: "17/02/1990", 
-							country: "France", 
-							id: "1", 
-							name: "John Doe", 
-							role: "Software Eng", 
-							salary: "5000"
-						}
-					}, 
-					type: "users/userUpdate"
-				});
-				expect(mockPush).toHaveBeenCalledWith('/');
-		});
 	})
-
-	
 })

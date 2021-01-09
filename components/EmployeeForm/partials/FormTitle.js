@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 const TitleSection = styled.div`
   display: grid;
@@ -27,5 +28,10 @@ const EmployeeFormTitle = ({ title, description }) => (
     <Description>{description}</Description>
   </TitleSection>
 );
+
+EmployeeFormTitle.propTypes = {
+	title: PropTypes.string,
+	description: PropTypes.string,
+};
 
 export default EmployeeFormTitle;

@@ -1,7 +1,6 @@
+import PropTypes from 'prop-types';
 import { useRouter } from 'next/router';
-import { useState } from 'react';
-import { useDispatch } from 'react-redux';
-import { usersAddOne, userUpdate } from '@/redux/slices/users';
+import { useCallback, useState } from 'react';
 import styled from 'styled-components';
 import { v4 as uuidv4 } from 'uuid';
 
@@ -41,14 +40,14 @@ const defaultEmployeeData = {
 const COUNTRIES = [
   "Portugal", 
   "Spain", 
-  "France", 
+  "France",
   "United States"
 ];
 
-const EmployeeForm = ({ data }) => {
-	const dispatch = useDispatch();
+const EmployeeForm = ({ data, onSubmit }) => {
   const router = useRouter();
   const [employee, setEmployee] = useState(data || defaultEmployeeData);
+  const confirmButtonText = Boolean(data) ? 'Save' : 'Add Employee';
 
   const handleChange = ev => {
     const { value, name } = ev.target;
@@ -59,19 +58,15 @@ const EmployeeForm = ({ data }) => {
   };
 
   const handleSubmitEmployee = (ev) => {
-		ev.preventDefault();
-		if(!data) {
-			dispatch(usersAddOne(employee));
-		} else {
-			dispatch(userUpdate({ id: employee.id, changes: employee }));
-		}
+    ev.preventDefault();
+    onSubmit(employee);
     router.push('/');
   }
 
-  const handleCancel = (ev) => {
+  const handleCancel = useCallback((ev) => {
 		ev.preventDefault();
 		router.push('/');
-	}
+	}, []);
 	
   return (
     <form onSubmit={handleSubmitEmployee}>
@@ -130,10 +125,22 @@ const EmployeeForm = ({ data }) => {
       </FieldContainer>
       <Actions>
         <Button variant="secondary" onClick={handleCancel}>Cancel</Button>
-        <Button>{ data ? 'Save' : 'Add Employee'}</Button>
+        <Button>{confirmButtonText}</Button>
       </Actions>
     </form>
   );
 }
+
+EmployeeForm.propTypes = {
+  data: PropTypes.shape({
+    id: PropTypes.string,
+    name: PropTypes.string,
+    birthdate: PropTypes.string,
+    role: PropTypes.string,
+    salary: PropTypes.string,
+    country: PropTypes.string,
+  }),
+  onSubmit: PropTypes.func
+};
 
 export default EmployeeForm;

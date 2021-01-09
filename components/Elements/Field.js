@@ -1,4 +1,5 @@
 import React, { useState, useCallback } from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { LabelOne } from '@/components/Elements/Typography'
 
@@ -29,7 +30,14 @@ const Field = ({ id, label, helperText, children }) => {
 		))}
       <HelperText>{helperText}</HelperText>
     </div>
-  )
+  );
 }
+
+Field.propTypes = {
+	id: PropTypes.string,
+	label: PropTypes.string,
+	helperText: PropTypes.string,
+	children: PropTypes.element.isRequired,
+};
 
 export default Field;
