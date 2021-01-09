@@ -50,6 +50,13 @@ describe('Form component', () => {
 			});
 			expect(mockPush).toHaveBeenCalledWith('/');
 		});
+
+		it('should redirect to the home page when user clicks on cancel button', () => {
+			const cancelButton = screen.getByText('Cancel');
+			fireEvent.click(cancelButton);
+			expect(mockOnSubmit).not.toHaveBeenCalledWith();
+			expect(mockPush).toHaveBeenCalledWith('/');
+		});
 	});
 
 	describe('when editing an existant employee', () => {
