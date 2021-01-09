@@ -12,7 +12,7 @@ const Ellipsis = css`
   overflow: hidden;
 `;
 
-const Container = styled.section`
+const Container = styled.div`
   align-items: center;
   margin: ${({ theme }) => `${theme.space[12]} auto ${theme.space[13]} auto`};
   display: flex;

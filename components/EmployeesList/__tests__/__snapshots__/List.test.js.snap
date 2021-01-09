@@ -50,7 +50,7 @@ exports[`Employee List component should render empty list 1`] = `
 }
 
 <div>
-  <section
+  <div
     class="c0"
   >
     <div>
@@ -72,7 +72,7 @@ exports[`Employee List component should render empty list 1`] = `
     >
       Add employee
     </a>
-  </section>
+  </div>
 </div>
 `;
 
@@ -231,7 +231,7 @@ exports[`Employee List component should render list 1`] = `
 }
 
 <div>
-  <section
+  <div
     class="c0"
   >
     <div>
@@ -253,7 +253,7 @@ exports[`Employee List component should render list 1`] = `
     >
       Add employee
     </a>
-  </section>
+  </div>
   <div
     class="c4"
   >

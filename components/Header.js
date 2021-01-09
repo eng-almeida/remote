@@ -1,10 +1,12 @@
 import styled from 'styled-components';
 import MainContainer from '@/components/MainContainer';
+import { LabelOne } from '@/components/Elements/Typography';
 
 const Header = styled.header`
 	background: ${({ theme }) => theme.colors.white};
 	height: 80px;
 `;
+
 const Container = styled(MainContainer)`
 	height: 100%;
 	display: flex;
@@ -25,14 +27,11 @@ const Avatar = styled.div`
 `;
 const User = styled.div`
 	color: ${({ theme }) => theme.colors.grays[300]};
-	font-size: 16px;
-	line-height: 19px;
 	font-weight: ${({ theme }) => theme.fontWeights.medium};
 `;
 const Role = styled.div`
 	color: ${({ theme }) => theme.colors.grays[100]};
-	font-size: 13px;
-	line-height: 16px;
+	${LabelOne}
 `;
 
 

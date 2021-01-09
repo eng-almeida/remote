@@ -9,7 +9,7 @@ exports[`Select component should match snapshot 1`] = `
   margin-bottom: 4px;
 }
 
-.c2 {
+.c4 {
   font-size: 13px;
   line-height: 16px;
   color: #00234B;
@@ -18,6 +18,10 @@ exports[`Select component should match snapshot 1`] = `
 }
 
 .c1 {
+  position: relative;
+}
+
+.c2 {
   font-size: 20px;
   line-height: 24px;
   border: none;
@@ -30,8 +34,25 @@ exports[`Select component should match snapshot 1`] = `
   -webkit-appearance: none;
 }
 
-.c1::-ms-expand {
+.c2::-ms-expand {
   display: none;
+}
+
+.c3 {
+  position: absolute;
+  right: 16px;
+  top: 8px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 10px;
+  height: 10px;
+  border-left: 2px solid #CED5DB;
+  border-bottom: 2px solid #CED5DB;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
 }
 
 <div>
@@ -42,29 +63,36 @@ exports[`Select component should match snapshot 1`] = `
     >
       Test
     </label>
-    <select
-      class="c1"
-      id="test"
-      name="test"
-    >
-      <option
-        value="Test 1"
-      >
-        Test 1
-      </option>
-      <option
-        value="Test 2"
-      >
-        Test 2
-      </option>
-      <option
-        value="Test 3"
-      >
-        Test 3
-      </option>
-    </select>
     <div
-      class="c2"
+      class="c1"
+    >
+      <select
+        class="c2"
+        id="test"
+        name="test"
+      >
+        <option
+          value="Test 1"
+        >
+          Test 1
+        </option>
+        <option
+          value="Test 2"
+        >
+          Test 2
+        </option>
+        <option
+          value="Test 3"
+        >
+          Test 3
+        </option>
+      </select>
+      <span
+        class="c3"
+      />
+    </div>
+    <div
+      class="c4"
     >
       Test helper
     </div>

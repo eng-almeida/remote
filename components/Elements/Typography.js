@@ -23,4 +23,4 @@ export const LabelFour = css`
 export const FieldText = css`
 	font-size: 20px;
 	line-height: 24px;
-`
+`;
