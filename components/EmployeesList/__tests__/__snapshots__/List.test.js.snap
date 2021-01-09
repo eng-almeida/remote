@@ -68,7 +68,7 @@ exports[`Employee List component should render empty list 1`] = `
     </div>
     <a
       class="c3"
-      href="/user"
+      href="/employee"
     >
       Add employee
     </a>
@@ -92,7 +92,7 @@ exports[`Employee List component should render list 1`] = `
   min-width: 142px;
 }
 
-.c13 {
+.c14 {
   display: inline-block;
   text-align: center;
   background: transparent;
@@ -189,6 +189,14 @@ exports[`Employee List component should render list 1`] = `
   -webkit-flex: none;
   -ms-flex: none;
   flex: none;
+  min-width: 142px;
+}
+
+.c13 {
+  color: #525F7F;
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
   min-width: 0;
 }
 
@@ -241,7 +249,7 @@ exports[`Employee List component should render list 1`] = `
     </div>
     <a
       class="c3"
-      href="/user"
+      href="/employee"
     >
       Add employee
     </a>
@@ -274,7 +282,6 @@ exports[`Employee List component should render list 1`] = `
       </div>
       <div
         class="c7"
-        style="min-width: 142px;"
       />
     </div>
     <div
@@ -321,11 +328,11 @@ exports[`Employee List component should render list 1`] = `
         </span>
       </div>
       <div
-        class="c7"
+        class="c13"
       >
         <a
-          class="c13"
-          href="/user/1"
+          class="c14"
+          href="/employee/1"
         >
           Edit
         </a>
@@ -375,11 +382,11 @@ exports[`Employee List component should render list 1`] = `
         </span>
       </div>
       <div
-        class="c7"
+        class="c13"
       >
         <a
-          class="c13"
-          href="/user/2"
+          class="c14"
+          href="/employee/2"
         >
           Edit
         </a>

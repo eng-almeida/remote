@@ -43,16 +43,18 @@ const shadows = {
 	0: "0px 6px 12px rgba(98, 77, 227, 0.3)"
 }
 
+const radii = {
+	small: "2px",
+	medium: "10px",
+	large: "50px",
+	round: "50%"
+};
+
 export default {
 	colors,
 	fontSizes: {},
 	fontWeights,
 	space,
-	radii: {
-		small: "2px",
-		medium: "10px",
-		large: "50px",
-		round: "50%"
-	},
+	radii,
 	shadows
 };

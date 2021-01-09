@@ -62,7 +62,7 @@ const Tr = styled.div`
 const Td = styled.div`
   color: ${({ theme }) => theme.colors.grays[200]};
   flex: ${({ size = 1 }) => size};
-  min-width: 0;
+  min-width: ${({ last = false }) => last ? '142px' : 0 };
 `;
 
 const Name = styled.div`
@@ -101,7 +101,7 @@ const EmployeesList = () => {
             {users.length} employees
           </EmployeesCount>
         </div>
-        <Link href="/user" passHref>
+        <Link href="/employee" passHref>
           <Button as="a">Add employee</Button>
         </Link>
       </Container>
@@ -112,7 +112,7 @@ const EmployeesList = () => {
             <Td>Job Title</Td>
             <Td>Country</Td>
             <Td>Salary</Td>
-            <Td size="none" style={{ minWidth: '142px' }}></Td>
+            <Td size="none" last></Td>
           </Th>
           {users.map(user => (
             <Tr key={user.id}>
@@ -127,7 +127,7 @@ const EmployeesList = () => {
                 <PerYear>per year</PerYear>
               </Td>
               <Td size="none">
-                <Link href={`/user/${user.id}`} passHref>
+                <Link href={`/employee/${user.id}`} passHref>
                   <Button as="a" variant="secondary">
                     Edit
                   </Button>

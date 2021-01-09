@@ -14,7 +14,7 @@ describe('Employee List component', () => {
 		expect(container).toMatchSnapshot();
 	});
 
-	it.only('should render list', () => {
+	it('should render list', () => {
 		const { container } = renderWithProviders(<EmployeeList />, { 
 			store: { 
 				users: { 
