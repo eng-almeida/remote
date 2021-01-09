@@ -1,0 +1,363 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CreateForm component should match snapshot 1`] = `
+.c13 {
+  display: inline-block;
+  text-align: center;
+  background: transparent;
+  border: 2px solid #624DE3;
+  border-radius: 50px;
+  box-shadow: 0px 6px 12px rgba(98,77,227,0.3);
+  padding: 12px 26px;
+  color: #624DE3;
+  font-size: 16px;
+  line-height: 19px;
+  font-family: inherit;
+  min-width: 142px;
+}
+
+.c14 {
+  display: inline-block;
+  text-align: center;
+  background: #624DE3;
+  border: 2px solid #624DE3;
+  border-radius: 50px;
+  box-shadow: 0px 6px 12px rgba(98,77,227,0.3);
+  padding: 12px 26px;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 19px;
+  font-family: inherit;
+  min-width: 142px;
+}
+
+.c6 {
+  font-size: 13px;
+  line-height: 16px;
+  display: block;
+  color: #778CA3;
+  margin-bottom: 4px;
+}
+
+.c8 {
+  font-size: 13px;
+  line-height: 16px;
+  color: #00234B;
+  opacity: 0.5;
+  margin-top: 8px;
+}
+
+.c7 {
+  font-size: 20px;
+  line-height: 24px;
+  font-family: inherit;
+  color: #00234B;
+  outline: none;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #CED5DB;
+  padding-bottom: 8px;
+  width: 100%;
+}
+
+.c7::-webkit-input-placeholder,
+.c7::-webkit-input-placeholder,
+.c7:-ms-input-placeholder {
+  color: #525F7F;
+}
+
+.c7::-moz-placeholder,
+.c7::-webkit-input-placeholder,
+.c7:-ms-input-placeholder {
+  color: #525F7F;
+}
+
+.c7:-ms-input-placeholder,
+.c7::-webkit-input-placeholder,
+.c7:-ms-input-placeholder {
+  color: #525F7F;
+}
+
+.c7::placeholder,
+.c7::-webkit-input-placeholder,
+.c7:-ms-input-placeholder {
+  color: #525F7F;
+}
+
+.c7::-webkit-outer-spin-button,
+.c7::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.c7[type=number] {
+  -moz-appearance: textfield;
+}
+
+.c7:focus {
+  border-bottom: 1.5px solid #624DE3;
+}
+
+.c9 {
+  position: relative;
+}
+
+.c10 {
+  font-size: 20px;
+  line-height: 24px;
+  border: none;
+  border-bottom: 1px solid #CED5DB;
+  color: #00234B;
+  outline: none;
+  padding-bottom: 8px;
+  width: 100%;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+
+.c10::-ms-expand {
+  display: none;
+}
+
+.c11 {
+  position: absolute;
+  right: 16px;
+  top: 8px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 10px;
+  height: 10px;
+  border-left: 2px solid #CED5DB;
+  border-bottom: 2px solid #CED5DB;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.c5 {
+  display: grid;
+  grid-row-gap: 30px;
+  margin: 48px auto 0 auto;
+  width: 600px;
+}
+
+.c12 {
+  background: #F9FAFF;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding: 32px 0;
+  margin-top: 80px;
+  text-align: center;
+}
+
+.c12 > button:first-child {
+  margin-right: 16px;
+}
+
+.c2 {
+  display: grid;
+  grid-row-gap: 4px;
+  padding: 34px 36px 30px 36px;
+  border-bottom: 1px solid #EAEDF3;
+}
+
+.c3 {
+  color: #00234B;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 27px;
+}
+
+.c4 {
+  color: #525F7F;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.c0 {
+  width: 1078px;
+  margin: auto;
+}
+
+.c1 {
+  background: #ffffff;
+  border-radius: 10px;
+  margin-top: 40px;
+}
+
+<div>
+  <div
+    class="c0 c1"
+  >
+    <div
+      class="c2"
+    >
+      <h1
+        class="c3"
+      >
+        Add a new employee
+      </h1>
+      <p
+        class="c4"
+      >
+        Fill out the information of your new employee.
+      </p>
+    </div>
+    <form>
+      <div
+        class="c5"
+      >
+        <div>
+          <label
+            class="c6"
+            for="name"
+          >
+            Name
+          </label>
+          <input
+            class="c7"
+            id="name"
+            name="name"
+            placeholder="e.g. Jane Doe"
+            required=""
+            value=""
+          />
+          <div
+            class="c8"
+          >
+            First and last name
+          </div>
+        </div>
+        <div>
+          <label
+            class="c6"
+            for="birthdate"
+          >
+            Birthdate
+          </label>
+          <input
+            class="c7"
+            id="birthdate"
+            name="birthdate"
+            pattern="\\\\d{1,2}/\\\\d{1,2}/\\\\d{4}"
+            placeholder="e.g. 17/02/1990"
+            required=""
+            value=""
+          />
+          <div
+            class="c8"
+          >
+            DD/MM/YYYY
+          </div>
+        </div>
+        <div>
+          <label
+            class="c6"
+            for="role"
+          >
+            Job Title
+          </label>
+          <input
+            class="c7"
+            id="role"
+            name="role"
+            placeholder="e.g. Product Manager"
+            required=""
+            value=""
+          />
+          <div
+            class="c8"
+          >
+            What is their role?
+          </div>
+        </div>
+        <div>
+          <label
+            class="c6"
+            for="country"
+          >
+            Country
+          </label>
+          <div
+            class="c9"
+          >
+            <select
+              class="c10"
+              id="country"
+              name="country"
+            >
+              <option
+                value="Portugal"
+              >
+                Portugal
+              </option>
+              <option
+                value="Spain"
+              >
+                Spain
+              </option>
+              <option
+                value="France"
+              >
+                France
+              </option>
+              <option
+                value="United States"
+              >
+                United States
+              </option>
+            </select>
+            <span
+              class="c11"
+            />
+          </div>
+          <div
+            class="c8"
+          >
+            Where are they base?
+          </div>
+        </div>
+        <div>
+          <label
+            class="c6"
+            for="salary"
+          >
+            Salary
+          </label>
+          <input
+            class="c7"
+            id="salary"
+            name="salary"
+            placeholder="e.g. 50000"
+            required=""
+            step="100"
+            type="number"
+            value=""
+          />
+          <div
+            class="c8"
+          >
+            Gross yearly salary
+          </div>
+        </div>
+      </div>
+      <div
+        class="c12"
+      >
+        <button
+          class="c13"
+        >
+          Cancel
+        </button>
+        <button
+          class="c14"
+        >
+          Add Employee
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+`;

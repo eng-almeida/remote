@@ -21,8 +21,7 @@ describe('Form component', () => {
 		})
 
 		it('should render Add button', () => {
-			const addButton = screen.getByText('Add Employee');
-			expect(addButton).toBeInTheDocument()
+			expect(screen.getByText('Add Employee')).toBeInTheDocument()
 		});
 
 		it('should call onSubmit callback and redirect to the home page on submit', () => {
@@ -73,8 +72,7 @@ describe('Form component', () => {
 		})
 
 		it('should render Save button', () => {
-			const saveButton = screen.getByText('Save');
-			expect(saveButton).toBeInTheDocument()
+			expect(screen.getByText('Save')).toBeInTheDocument()
 		});
 	})
 })
