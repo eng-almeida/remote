@@ -7,6 +7,8 @@ exports[`Field component should match snapshot 1`] = `
   display: block;
   color: #778CA3;
   margin-bottom: 4px;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
 }
 
 .c1 {
@@ -42,6 +44,8 @@ exports[`Field component when input is focused should match snapshot 1`] = `
   display: block;
   color: #624DE3;
   margin-bottom: 4px;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
 }
 
 .c1 {

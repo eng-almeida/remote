@@ -1,8 +1,29 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import PropTypes from 'prop-types';
 
 import Field from './Field';
 import { FieldText } from './Typography';
+
+const rotate = keyframes`
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+`;
+
+const Border = styled.div`
+	position: absolute;
+	bottom: 0;
+	width: 0;
+	border-bottom: 1px solid ${({ theme }) => theme.colors.purple[200]};
+`;
+
+const TextFieldContainer = styled.div`
+	position: relative;
+`;
 
 const TextInput = styled.input`
 	${FieldText}
@@ -31,14 +52,18 @@ const TextInput = styled.input`
 		-moz-appearance: textfield;
 	}
 
-	&:focus {
-		border-bottom: 1.5px solid ${({ theme }) => theme.colors.purple[200]};
+	&:focus + ${Border} {
+		animation: ${rotate} 0.2s linear;
+		animation-fill-mode: forwards;
 	}
 `;
 
 const TextField = ({ label, helperText, ...inputProps }) => (
 	<Field label={label} helperText={helperText} id={inputProps.id}>
-		<TextInput {...inputProps} />
+		<TextFieldContainer>
+			<TextInput {...inputProps} />
+			<Border />
+		</TextFieldContainer>
 	</Field>
 );
 

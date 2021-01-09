@@ -7,9 +7,11 @@ exports[`TextField component should match snapshot 1`] = `
   display: block;
   color: #778CA3;
   margin-bottom: 4px;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
 }
 
-.c2 {
+.c5 {
   font-size: 13px;
   line-height: 16px;
   color: #00234B;
@@ -17,7 +19,18 @@ exports[`TextField component should match snapshot 1`] = `
   margin-top: 8px;
 }
 
+.c4 {
+  position: absolute;
+  bottom: 0;
+  width: 0;
+  border-bottom: 1px solid #624DE3;
+}
+
 .c1 {
+  position: relative;
+}
+
+.c2 {
   font-size: 20px;
   line-height: 24px;
   font-family: inherit;
@@ -30,42 +43,45 @@ exports[`TextField component should match snapshot 1`] = `
   width: 100%;
 }
 
-.c1::-webkit-input-placeholder,
-.c1::-webkit-input-placeholder,
-.c1:-ms-input-placeholder {
+.c2::-webkit-input-placeholder,
+.c2::-webkit-input-placeholder,
+.c2:-ms-input-placeholder {
   color: #525F7F;
 }
 
-.c1::-moz-placeholder,
-.c1::-webkit-input-placeholder,
-.c1:-ms-input-placeholder {
+.c2::-moz-placeholder,
+.c2::-webkit-input-placeholder,
+.c2:-ms-input-placeholder {
   color: #525F7F;
 }
 
-.c1:-ms-input-placeholder,
-.c1::-webkit-input-placeholder,
-.c1:-ms-input-placeholder {
+.c2:-ms-input-placeholder,
+.c2::-webkit-input-placeholder,
+.c2:-ms-input-placeholder {
   color: #525F7F;
 }
 
-.c1::placeholder,
-.c1::-webkit-input-placeholder,
-.c1:-ms-input-placeholder {
+.c2::placeholder,
+.c2::-webkit-input-placeholder,
+.c2:-ms-input-placeholder {
   color: #525F7F;
 }
 
-.c1::-webkit-outer-spin-button,
-.c1::-webkit-inner-spin-button {
+.c2::-webkit-outer-spin-button,
+.c2::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-.c1[type=number] {
+.c2[type=number] {
   -moz-appearance: textfield;
 }
 
-.c1:focus {
-  border-bottom: 1.5px solid #624DE3;
+.c2:focus + .c3 {
+  -webkit-animation: cvpVum 0.2s linear;
+  animation: cvpVum 0.2s linear;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
 }
 
 <div>
@@ -76,14 +92,21 @@ exports[`TextField component should match snapshot 1`] = `
     >
       Test
     </label>
-    <input
-      class="c1"
-      id="test"
-      name="test"
-      placeholder="Test"
-    />
     <div
-      class="c2"
+      class="c1"
+    >
+      <input
+        class="c2"
+        id="test"
+        name="test"
+        placeholder="Test"
+      />
+      <div
+        class="c3 c4"
+      />
+    </div>
+    <div
+      class="c5"
     >
       Test helper
     </div>

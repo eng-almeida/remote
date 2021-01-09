@@ -8,6 +8,7 @@ const Label =  styled.label`
 	display: block;
 	color: ${({ theme, isFocus }) => isFocus ? theme.colors.purple[200] : theme.colors.grays[100]};
 	margin-bottom: ${({ theme }) => theme.space[1]};
+	transition: color 0.2s;
 `;
 
  const HelperText = styled.div`
@@ -25,9 +26,9 @@ const Field = ({ id, label, helperText, children }) => {
   return (
     <div>
       <Label isFocus={isFocus} htmlFor={id}>{label}</Label>
-		{React.Children.map(children, child => (
-			React.cloneElement(child, { onFocus: handleFocus, onBlur: handleBlur })
-		))}
+			{React.Children.map(children, child => (
+				React.cloneElement(child, { onFocus: handleFocus, onBlur: handleBlur })
+			))}
       <HelperText>{helperText}</HelperText>
     </div>
   );

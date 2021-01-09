@@ -7,6 +7,8 @@ exports[`Select component should match snapshot 1`] = `
   display: block;
   color: #778CA3;
   margin-bottom: 4px;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
 }
 
 .c4 {
