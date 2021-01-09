@@ -113,6 +113,8 @@ const EmployeeForm = ({ data, onSubmit }) => {
           {COUNTRIES.map((value, idx) => <option key={idx} value={value}>{value}</option>)}
         </Select>
         <TextField
+          type="number"
+          step="100"
           label="Salary"
           helperText="Gross yearly salary"
           id="salary"

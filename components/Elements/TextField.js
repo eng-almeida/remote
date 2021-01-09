@@ -21,6 +21,16 @@ const TextInput = styled.input`
 		color: ${({ theme }) => theme.colors.grays[200]};
 	}
 
+	&::-webkit-outer-spin-button,
+	&::-webkit-inner-spin-button {
+		-webkit-appearance: none;
+		margin: 0;
+	}
+
+	&[type=number] {
+		-moz-appearance: textfield;
+	}
+
 	&:focus {
 		border-bottom: 1.5px solid ${({ theme }) => theme.colors.purple[200]};
 	}
