@@ -1,5 +1,5 @@
 import { screen, fireEvent } from '@testing-library/react';
-import Form from '../partials/Form';
+import Form from '../Form';
 
 jest.mock('uuid', () => ({
   v4: jest.fn().mockReturnValue("1"),

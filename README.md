@@ -29,3 +29,4 @@ Run `yarn test`
 * CSS-in-JS with `styled-components` library.
 * For testing `Jest + React Testing Library` were the selected libraries.
 * Components that could live in a design systems or an UI library, like buttons or inputs, are inside the folder `components/Elements`.
+* Application does not support i18n.

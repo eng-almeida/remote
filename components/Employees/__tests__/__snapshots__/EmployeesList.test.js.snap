@@ -73,6 +73,9 @@ exports[`Employee List component should render empty list 1`] = `
       Add employee
     </a>
   </div>
+  <p>
+    No employees available. Add new employees
+  </p>
 </div>
 `;
 

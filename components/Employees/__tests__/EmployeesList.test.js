@@ -1,5 +1,4 @@
-import { screen, fireEvent } from '@testing-library/react';
-import EmployeeList from '../List';
+import EmployeeList from '../EmployeesList';
 
 describe('Employee List component', () => {
 	it('should render empty list', () => {

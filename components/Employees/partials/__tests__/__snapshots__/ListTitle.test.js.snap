@@ -1,0 +1,77 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ListTitle component should match snapshot 1`] = `
+.c3 {
+  display: inline-block;
+  text-align: center;
+  background: #624DE3;
+  border: 2px solid #624DE3;
+  border-radius: 50px;
+  box-shadow: 0px 6px 12px rgba(98,77,227,0.3);
+  padding: 12px 26px;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 19px;
+  font-family: inherit;
+  min-width: 142px;
+}
+
+.c0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 48px auto 56px auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.c1 {
+  color: #00234B;
+  display: inline-block;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 31px;
+  margin-right: 8px;
+}
+
+.c2 {
+  color: #778CA3;
+  display: inline-block;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 16px;
+}
+
+<div>
+  <div
+    class="c0"
+  >
+    <div>
+      <h1
+        class="c1"
+      >
+        People
+      </h1>
+      <span
+        class="c2"
+      >
+        3
+         employees
+      </span>
+    </div>
+    <a
+      class="c3"
+      href="/employee"
+    >
+      Add employee
+    </a>
+  </div>
+</div>
+`;

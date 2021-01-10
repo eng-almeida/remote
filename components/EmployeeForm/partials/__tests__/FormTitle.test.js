@@ -1,4 +1,4 @@
-import FormTitle from '../partials/FormTitle';
+import FormTitle from '../FormTitle';
 
 describe('FormTitle component', () => {
 	it('should match snapshot', () => {
