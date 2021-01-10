@@ -35,9 +35,9 @@ const Field = ({ id, label, helperText, children }) => {
 }
 
 Field.propTypes = {
-	id: PropTypes.string,
-	label: PropTypes.string,
-	helperText: PropTypes.string,
+	id: PropTypes.string.isRequired,
+	label: PropTypes.string.isRequired,
+	helperText: PropTypes.string.isRequired,
 	children: PropTypes.element.isRequired,
 };
 

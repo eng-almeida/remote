@@ -1,8 +1,9 @@
 import Link from 'next/link';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+
 import Button from '@/components/Elements/Button';
-import { UserIcon } from '@/icons/index'
+import { UserIcon } from '@/icons/index';
 
 const Container = styled.div`
   align-items: center;
@@ -44,7 +45,7 @@ const ListTitle = ({ employeesCount }) => (
 );
 
 ListTitle.propTypes = {
-  employeesCount: PropTypes.number
+  employeesCount: PropTypes.number,
 };
 
 export default ListTitle;

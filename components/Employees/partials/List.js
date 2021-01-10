@@ -3,7 +3,12 @@ import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
 
 import Button from '@/components/Elements/Button';
-import { LabelOne, LabelTwo, LabelThree, LabelFour } from '@/components/Elements/Typography';
+import {
+  LabelFour,
+  LabelOne,
+  LabelThree,
+  LabelTwo,
+} from '@/components/Elements/Typography';
 
 const Ellipsis = css`
   white-space: nowrap;
@@ -37,7 +42,7 @@ const Tr = styled.div`
 const Td = styled.div`
   color: ${({ theme }) => theme.colors.grays[200]};
   flex: ${({ size = 1 }) => size};
-  min-width: ${({ last = false }) => last ? '142px' : 0 };
+  min-width: ${({ last = false }) => (last ? '142px' : 0)};
 `;
 
 const Name = styled.div`
@@ -85,8 +90,7 @@ const List = ({ employees }) => (
         </Td>
         <Td>{user.country}</Td>
         <Td>
-          {formatPrice(user.salary)} USD{' '}
-          <PerYear>per year</PerYear>
+          {formatPrice(user.salary)} USD <PerYear>per year</PerYear>
         </Td>
         <Td size="none">
           <Link href={`/employee/${user.id}`} passHref>
@@ -101,7 +105,7 @@ const List = ({ employees }) => (
 );
 
 List.propTypes = {
-	employees: PropTypes.arrayOf(
+  employees: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string,
       name: PropTypes.string,
@@ -109,9 +113,8 @@ List.propTypes = {
       role: PropTypes.string,
       salary: PropTypes.string,
       country: PropTypes.string,
-    })
+    }),
   ),
 };
-
 
 export default List;
