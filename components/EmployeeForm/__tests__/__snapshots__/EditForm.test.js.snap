@@ -2,7 +2,14 @@
 
 exports[`EditForm component should match snapshot 1`] = `
 .c16 {
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   text-align: center;
   background: transparent;
   border: 2px solid #624DE3;
@@ -16,8 +23,19 @@ exports[`EditForm component should match snapshot 1`] = `
   min-width: 142px;
 }
 
+.c16 > svg {
+  margin-right: 8px;
+}
+
 .c17 {
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   text-align: center;
   background: #624DE3;
   border: 2px solid #624DE3;
@@ -29,6 +47,10 @@ exports[`EditForm component should match snapshot 1`] = `
   line-height: 19px;
   font-family: inherit;
   min-width: 142px;
+}
+
+.c17 > svg {
+  margin-right: 8px;
 }
 
 .c6 {

@@ -2,6 +2,7 @@ import Link from 'next/link';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Button from '@/components/Elements/Button';
+import { UserIcon } from '@/icons/index'
 
 const Container = styled.div`
   align-items: center;
@@ -34,7 +35,10 @@ const ListTitle = ({ employeesCount }) => (
       <EmployeesCount>{employeesCount} employees</EmployeesCount>
     </div>
     <Link href="/employee" passHref>
-      <Button as="a">Add employee</Button>
+      <Button as="a">
+        <UserIcon />
+        Add employee
+      </Button>
     </Link>
   </Container>
 );

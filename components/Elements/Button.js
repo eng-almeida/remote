@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 
 const Button = styled.button`
-  display: inline-block;
+  display: inline-flex;
+  justify-content: center;
   text-align: center;
   background: ${({ theme, variant = 'primary' }) => variant === 'secondary' ? 'transparent' : theme.colors.purple[200] };
   border: 2px solid ${({ theme }) => theme.colors.purple[200] };
@@ -13,5 +14,9 @@ const Button = styled.button`
   line-height: 19px;
   font-family: inherit;
   min-width: 142px;
+
+  & > svg {
+    margin-right: ${({ theme }) => theme.space[2]};
+  }
 `
 export default Button;
