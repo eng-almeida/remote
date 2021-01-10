@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import Link from 'next/link';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
@@ -29,7 +30,7 @@ const EmployeesCount = styled.span`
   line-height: 16px;
 `;
 
-const ListTitle = ({ employeesCount }) => (
+const ListTitle = memo(({ employeesCount }) => (
   <Container>
     <div>
       <Title>People</Title>
@@ -42,7 +43,7 @@ const ListTitle = ({ employeesCount }) => (
       </Button>
     </Link>
   </Container>
-);
+));
 
 ListTitle.propTypes = {
   employeesCount: PropTypes.number,

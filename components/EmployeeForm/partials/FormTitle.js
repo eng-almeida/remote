@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
@@ -22,12 +23,12 @@ const Description = styled.p`
   line-height: 22px;
 `;
 
-const EmployeeFormTitle = ({ title, description }) => (
+const EmployeeFormTitle = memo(({ title, description }) => (
   <TitleSection>
     <Title>{title}</Title>
     <Description>{description}</Description>
   </TitleSection>
-);
+));
 
 EmployeeFormTitle.propTypes = {
 	title: PropTypes.string,
