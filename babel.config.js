@@ -7,5 +7,12 @@ module.exports = {
         }
       ]
     ],
-    "plugins": []
+    "plugins": [
+      [
+        "styled-components",
+        {
+          "ssr": true
+        }
+      ]
+    ]
   }

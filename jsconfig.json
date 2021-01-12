@@ -1,10 +1,10 @@
 {
   "compilerOptions": {
-	"baseUrl": ".",
-	"paths": {
-		"@/components/*": ["components/*"],
-		"@/redux/*": ["redux/*"],
-		"@/icons/*": ["icons/*"],
-	}
+		"baseUrl": ".",
+		"paths": {
+			"@/components/*": ["components/*"],
+			"@/redux/*": ["redux/*"],
+			"@/icons/*": ["icons/*"],
+		}
   }
 }
